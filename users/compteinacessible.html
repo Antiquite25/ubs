@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title> UBS </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/font-awesome.css" rel="stylesheet">
+    <link href="dist/css/font-awesome.min.css" rel="stylesheet">
+    <link href="dist/css/demo-page.css" rel="stylesheet" media="all">
+	<link href="dist/css/hover.css" rel="stylesheet" media="all">
+
+    <!-- Custom styles for this template -->
+    <link href="navbar-fixed-top.css" rel="stylesheet">
+    
+
+<link href="https://fonts.googleapis.com/css55d0.css?family=Montserrat" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+    <script language="JavaScript">
+
+
+
+     </script>
+<style>
+ .Row
+{
+    display: table;
+    width: 100%; /*Optional*/
+    table-layout: fixed; /*Optional*/
+    border-spacing: 10px; /*Optional*/
+}
+.Column
+{
+    display: table-cell;
+    
+}
+
+	 	#deuxieme {
+		 
+			position: fixed;
+			bottom: 50px;
+			left: 130px;
+			z-index: 1500; /* ICI le z-index */
+			margin-right: 25px;
+			line-height: 10px;
+			text-align:right;
+		}           
+/* Généralités CSS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.quick-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.quick-actions div {
+    font-size: 14px;
+    color: #444;
+}
+
+.account-info {
+    text-align: center;
+    padding: 30px 10px;
+    background-color: #fff;
+}
+
+.account-info h2 {
+    margin: 10px 0 5px;
+}
+
+.account-info p {
+    margin: 3px 0;
+    font-size: 15px;
+    color: #555;
+}
+
+.menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #666;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.menu a.active {
+    color: red;
+    font-weight: bold;
+}
+
+/* Animation pour l'interface entre les rubriques */
+.section {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>UBS Banque</h1>
+    <div class="dropdown">
+        <span>☰</span>
+        <div class="dropdown-content">
+            <a href="index.html" onclick="showSection('home')">Accueil</a>
+            <a href="virement.html" onclick="showSection('virement')">Virement</a>
+            <a href="releve.html" onclick="showSection('rib')">RIB</a>
+            <a href="cartes.html" onclick="showSection('cartes')">Cartes</a>
+            <a href="operation.html" onclick="showSection('operations')">Opérations</a>
+            <a href="#" onclick="showSection('epargne')">Piloter mon épargne</a>
+            <a href="#" onclick="showSection('parametres')">Paramètres</a>
+        </div>
+    </div>
+</div>
+
+<!-- Rubriques -->
+<div id="home" class="section" style="display:block;">
+     <div class="container"> 
+	
+          
+	        
+
+           <div class="row">
+   
+
+            <div class="col-md-12">
+ 
+           <div style="background-color:#008654; padding:1px; margin-bottom:15px; margin-top:10px;"></div>
+		   
+
+	 <!--  <div id="DivClignotante" style="visibility:visible;color:red;text-align:center;font-size:20px;">COMPTE TEMPORAIREMENT SUSPENDU POUR DES RAISONS DE S&Eacute;CURIT&Eacute; - VEUILLEZ CONTACTER VOTRE GESTIONNAIRE</div ><p> 
+
+    <script type="text/javascript"> 
+var clignotement = function(){ 
+   if (document.getElementById('DivClignotante').style.visibility=='visible'){ 
+      document.getElementById('DivClignotante').style.visibility='hidden'; 
+   } 
+   else{ 
+   document.getElementById('DivClignotante').style.visibility='visible'; 
+   } 
+}; 
+// mise en place de l appel de la fonction toutes les 0.8 secondes 
+// Pour arrêter le clignotement : clearInterval(periode); 
+periode = setInterval(clignotement, 800); 
+</script>   
+<!-- <p style="font-size:20px;">Tous Comptes </p>
+			<p  > Bienvenue<br><b style="font-size:13px;color:#000;"><i class="fa fa-user-circle-o" aria-hidden="true" ></i> M. JOSEPH DENIS LAVANCHY </b></p>-->
+            <!--  <div class="col-md-12" style="padding:5px;color:#000;box-shadow: 3px 3px 3px 3px #008654;"> 
+			  <p class="Column" style="font-size:20px;width:75%;color:#000;">Compte tout compris<br>
+			  <b style="font-size:12px;color:#000;">CCHQ </b> <b style="font-size:12px;color:#000;"> N° 5000 9530 0243 9900 017</b><br><br><br><br></p>
+			 <p class="Column" style="font-size:20px;width:25%;text-align:right;"><img src="soleil.png"  /><br><br><br><br></p>
+			 
+<p align="center">
+    <b style="font-size:30px;color:#000;">10 000 000,00</b>
+    <b style="font-size:30px;color:#000;"> CHF</b><br>
+			  <b style="font-size:15px;"><i class="fa fa-circle" aria-hidden="true" ></i> Compte courant</b></p></div>  <br> -->
+			
+            <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-12 text-center text-md-left  mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+		   <hr class="hr-dark">
+           <h4><a href="index.html" style="color:#000;"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour</a></h4>  
+          <p>Avec  UBS , vous disposez exactement des mêmes fonctionnalités de consultation de vos comptes et de virement, 
+		  mais avec une sécurité renforcée.</p>
+          
+ <div class="card"  >
+  <div class="card-header" style="background-color:#000;color:#fff;">
+    <h4><i class="fa fa-money"></i>   <b> EFFECTUER UN VIREMENT</b>  </h4>
+ 
+  </div> </div>
+  <div class="container2 text-center border border-light p-2">
+            <div class="col-12">
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" align="center">
+    <div class="modal-content"  >
+      <div class="modal-header" >
+        <h3 class="modal-title" id="exampleModalLabel"><b style="color:#008654;text-align:center;">X   PAS D'OFFRES DISPONIBLE</b></h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+       
+    </div>
+  </div>
+</div>        
+
+         <p  align="left" style="font-size:20px;">
+  1/1 - Fin du virement</p>
+ 
+   <table class="table" style="border:2px solid black ">
+      
+    <tbody >
+	<tr  >
+        <td style=""> <i class="fa fa-exclamation-circle fa-3x" aria-hidden="true"></i>
+</td>
+        <td style="vertical-align: middle;text-align:left;"><b style="font-weight:bold;color:#16579B;font-size:13px;">Votre virement a été bloqué, 
+		 veulliez vous rendre dans une banque UBS  pour plus d'info, prenez RDV avec votre gestionnaire muni 
+		 de votre pièce d'identité pour validation de votre transaction!</b><br><br>
+        <!--VEUILLEZ VOUS ACQUITER DES FRAIS DE DÉBLOCAGE DE VOTRE COMPTE D’UN MONTANT DE 14 300,00 EUROS</b>
+		<br><br>-->
+		   </td>
+        
+      </tr>
+	 
+	 
+       
+      
+    </tbody>
+  </table>
+ <p style="text-align:right;text-transform:uppercase;">
+Vous souhaitez maintenant:<br><br> 
+
+<a style="text-decoration:underline">Informez le bénéficiaire et/ou être informé</a><br>
+<a style="text-decoration:underline">Copier le virement à l'identique</a><br>
+<a href="virement.html" style="text-decoration:underline">Créer un nouveau virement</a>
+
+</p>
+
+            </div>
+          </div>
+  </div>
+ 
+ 
+<div class="col-lg-12" style="padding:20px;">
+ 
+</div>
+        <!--Grid column-->
+        <!--Grid column-->
+        
+        <!--Grid column-->
+      </div>
+              <div class="col-md-12">
+		     <br> <br> <br>     </div>
+		   </div>
+ 		  <!-- <div class="Row" style="background-color:#000;color:#fff;">
+    <div class="Column" style="text-align:center;"><a style="background-color:#000;color:#fff;"> A Propos 
+	 </a></div>
+    <div class="Column" style="text-align:center"> <a href="#" style="background-color:#000;color:#fff;"> Parler à un conseiller</a> </div>
+    <div class="Column" style="text-align:center">  <a style="background-color:#000;color:#fff;"> Trouver une Agence</a> </div>
+</div>-->
+           
+           
+           </div>
+   </div>
+</div>
+
+<!-- Exemple de section supplémentaire, tu ajouteras les autres pages ici -->
+<div id="virement" class="section">
+    <h2>Virement</h2>
+    <p>Content de la page Virement</p>
+</div>
+
+<!-- Menu de navigation fixe -->
+<div class="menu">
+    <a href="index.html" class="active">Accueil</a>
+	   <a href="cartes.html"  >Accueil</a>
+    <a href="operation.html">Operations</a>
+    <a href="releve.html">releve</a>
+    
+    <a href="plus.html">Plus</a>
+</div>
+
+<script>
+// Fonction pour afficher les sections
+function showSection(sectionId) {
+    // Cacher toutes les sections
+    let sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Afficher la section demandée
+    let sectionToShow = document.getElementById(sectionId);
+    sectionToShow.style.display = 'block';
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

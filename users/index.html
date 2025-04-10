@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title> UBS </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/font-awesome.css" rel="stylesheet">
+    <link href="dist/css/font-awesome.min.css" rel="stylesheet">
+    <link href="dist/css/demo-page.css" rel="stylesheet" media="all">
+	<link href="dist/css/hover.css" rel="stylesheet" media="all">
+
+    <!-- Custom styles for this template -->
+    <link href="navbar-fixed-top.css" rel="stylesheet">
+    
+
+<link href="https://fonts.googleapis.com/css55d0.css?family=Montserrat" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+    <script language="JavaScript">
+
+
+
+     </script>
+<style>
+ .Row
+{
+    display: table;
+    width: 100%; /*Optional*/
+    table-layout: fixed; /*Optional*/
+    border-spacing: 10px; /*Optional*/
+}
+.Column
+{
+    display: table-cell;
+    
+}
+
+	 	#deuxieme {
+		 
+			position: fixed;
+			bottom: 50px;
+			left: 130px;
+			z-index: 1500; /* ICI le z-index */
+			margin-right: 25px;
+			line-height: 10px;
+			text-align:right;
+		}           
+/* Généralités CSS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.quick-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.quick-actions div {
+    font-size: 14px;
+    color: #444;
+}
+
+.account-info {
+    text-align: center;
+    padding: 30px 10px;
+    background-color: #fff;
+}
+
+.account-info h2 {
+    margin: 10px 0 5px;
+}
+
+.account-info p {
+    margin: 3px 0;
+    font-size: 15px;
+    color: #555;
+}
+
+.menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #666;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.menu a.active {
+    color: red;
+    font-weight: bold;
+}
+
+/* Animation pour l'interface entre les rubriques */
+.section {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1><img src="lcl_logo.jpg" style="height:40px;"></h1>
+    <div class="dropdown">
+        <span>☰</span>
+        <div class="dropdown-content">
+            <a href="index.html" onclick="showSection('home')">Accueil</a>
+            <a href="virement.html" onclick="showSection('virement')">Virement</a>
+            <a href="releve.html" onclick="showSection('rib')">RIB</a>
+            <a href="cartes.html" onclick="showSection('cartes')">Cartes</a>
+            <a href="operation.html" onclick="showSection('operations')">Opérations</a>
+            <a href="#" onclick="showSection('epargne')">Piloter mon épargne</a>
+            <a href="#" onclick="showSection('parametres')">Paramètres</a>
+        </div>
+    </div>
+</div>
+
+<!-- Rubriques -->
+<div id="home" class="section" style="display:block;">
+     <div class="container"> 
+	   <div style="background-color:#000; background-position:center; height:auto; color:#FFF; padding:10px; box-shadow: 0px 5px 8px #333;">
+    
+        <div class="container" align="center">
+		
+        
+         
+      	
+      <h4  align="center" style="font-size:20px; margin:0px;"><i class="fa fa-power-off" aria-hidden="true"></i> <a href="authentication.html" style="padding-top:8px; color:#fff;padding-bottom:0px;margin-top:0px; margin-bottom:0px;"> Deconnexion</a></h4>
+      </div>
+	 </div> 
+	 <br>
+	 <div class="row">
+         <div class="col-md-12">
+ 
+           <div style="background-color:#FE0003; padding:1px; margin-bottom:15px; margin-top:10px;"></div>
+		   
+ 
+    <br><br>
+		   
+<!-- <p style="font-size:20px;">Tous Comptes </p>
+			<p  > Bienvenue<br><b style="font-size:13px;color:#000;"><i class="fa fa-user-circle-o" aria-hidden="true" ></i> SABRINA DUAND  </b></p>-->
+            <!--  <div class="col-md-12" style="padding:5px;color:#000;box-shadow: 3px 3px 3px 3px #FE0003;"> 
+			  <p class="Column" style="font-size:20px;width:75%;color:#000;">Compte tout compris<br>
+			  <b style="font-size:12px;color:#000;">CCHQ </b> <b style="font-size:12px;color:#000;"> N° 5000 9530 0243 9900 017</b><br><br><br><br></p>
+			 <p class="Column" style="font-size:20px;width:25%;text-align:right;"><img src="soleil.png"  /><br><br><br><br></p>
+			 
+<p align="center">
+    <b style="font-size:30px;color:#000;">10 000 000,00</b>
+    <b style="font-size:30px;color:#000;"> CHF</b><br>
+			  <b style="font-size:15px;"><i class="fa fa-circle" aria-hidden="true" ></i> Compte courant</b></p></div>  <br><br><br> -->
+			    <div class="col-md-12" style="padding:5px;box-shadow: 1px 1px 1px 1px silver;"> 
+				<p align="center"><button type="button" class="btn btn-success" style="background-color:#FE0003;border-radius: 30px;">SABRINA DUAND   <i class="fa fa-chevron-down"></i> </button><br><br>
+				<a><b style="font-size:17px;color:#000;">   
+				
+			  <!-- <div ><marquee style="background-color:red;color:white;">COMPTE BLOQU&Eacute;: FRAIS DE D&Eacute;BLOCAGE 40 000,00 CHF</marquee></div> -->887 000,00 CHF</b></a></p>
+			   <div class="Row"  >
+    <div class="Column"  style="text-align:left;width:33%;text-align:center;"><i class="fa fa-align-justify fa-3x"  style="border-radius: 30px;background-color:#FE0003;padding:10px;color:#fff;"></i><br>	Télécharger RIB </div>
+    <div class="Column" style="text-align:left;width:33%;text-align:center;" >  <i class="fa fa-file fa-3x" aria-hidden="true"  style="border-radius: 30px;background-color:#FE0003;padding:10px;color:#fff;"></i><br>Commander un chèquier </div>
+    <div class="Column"  style="text-align:right;width:33%;text-align:center;"><i class="glyphicon glyphicon-piggy-bank fa-3x" aria-hidden="true" style="border-radius: 30px;background-color:#FE0003;padding:10px;color:#fff;"></i><br> Mes Rélévés de comptes</div>
+</div> 
+
+			    <!-- <p style="font-size:20px;">Compte tout compris <img src="soleil.png" width="10%;"><br>
+			  <b style="font-size:10px;">CCHQ N° 5000 9530 0243 9900 017</b><br><br><br> </p>   
+			  <p align="center">  
+			  <b style="font-size:25px;color:#000;color:#fff;">  <i class="fa fa-lock" aria-hidden="true" ></i> 
+			<div ><marquee style="background-color:red;color:white;">COMPTE BLOQU&Eacute;: FRAIS DE D&Eacute;BLOCAGE 40 000,00 CHF</marquee></div> 10 000 000,00 CHF</b><br>
+			  <i class="fa fa-circle" aria-hidden="true"></i> Compte courant</p>    -->
+            </div><br><br>
+			<p align="center">Dernière connexion:   <?php echo date('l jS \of F Y h:i:s A'); ?> </p>
+<p> <form action="#">
+  <div class="form-group">
+      <div class="Row"  >
+    <div class="Column "  style="text-align:left;width:90%; "> <input type="email" class="form-control" id="email"  style="border-radius: 30px;padding:10px;" placeholder="Saisir votre recherche"></div>
+     <div class="Column"  style="text-align:right;width:10%;text-align:center;"><i class="glyphicon glyphicon-indent-left fa-2x" aria-hidden="true" style="border: 1px solid #FE0003;border-radius: 30px;background-color:#fff;padding:12px;color:#FE0003;">
+	</i> </div>
+</div> 
+
+  
+  </div>
+  
+  
+</form> </p><br> 
+           <p style="font-size:20px;"><b>Epargne</b></p>
+              <div class="col-md-12" style="background-color:#000;padding:5px;color:#fff;"> 
+			  <ul>
+			  <li><b style="font-size:16px;">Livret A</b><br>
+			  <b style="font-size:10px;">Compte livret A: Insdisponible</b><br></li>
+			   <li><b style="font-size:16px;">Compte Epargne Logement</b><br>
+			  <b style="font-size:10px;">Aucun</b><br></li>
+			  </ul> 
+			  </div>
+			  <br>  <br>  <br>   
+            <p style="font-size:20px;"><b>Budget</b></p>
+              <div class="col-md-12" style="background-color:#000;padding:5px;color:#fff;"> 
+  <ul>
+			  <li ><b style="font-size:16px;">Crédit</b><br>
+			  <b style="font-size:10px;">Pret Personnel   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Indisponible</b><br></li>
+			   <li><b style="font-size:16px;">Assurance</b><br>
+			  <b style="font-size:10px;">Assurance vie</b><br></li>
+			  <li><b style="font-size:16px;">Autre Dépenses</b><br>
+			 			 <b style="font-size:10px;">Aucun</b><br></li>
+			  </ul> 
+			  </div><br><br><br>
+			   <p style="font-size:20px;color:#FE0003"  ><b>Mouvements</b></p>
+			 <div style="background-color:#FFCC00; padding:1px; margin-bottom:15px; margin-top:10px;width:25%"></div>
+			       <ul>
+			  <li><b style="font-size:16px;">Encours</b><br>
+			 </li>
+			   </ul> <div class="Row"  style="background-color:silver;">
+				  
+    <div class="Column"  style="text-align:left;width:5%">
+</div>
+    <div class="Column" style="text-align:left;width:55%" >Aucun</div>
+    <div class="Column"  style="text-align:right;width:40%;color:black;">   <!--<div ><marquee style="background-color:#FE0003;color:white;">COMPTE BLOQU&Eacute;: FRAIS DE D&Eacute;BLOCAGE 35 000,00 CHF</marquee></div>  -->
+  0,00 CHF</div>
+</div> <br><br>
+			 <div class="Row"  >
+    <div class="Column"  style="text-align:left;width:10%;  "> <img src="prelevement.png" width="100%"     ></div>
+ 
+    <div class="Column" style="text-align:left;width:90%; " > <b >Prélèvement à venir </b><br><strong style="font-weight:normal;">Non compris dans le solde</strong></div>
+</div>  <p style="font-size:20px;color:#FE0003"><b>MES OPERATIONS - 2025</b></p>
+			  <div style="background-color:#FFCC00; padding:1px; margin-bottom:15px; margin-top:10px;width:25%"></div>
+        <table class="table table-striped">
+    <thead>
+      <tr>
+        
+      </tr>
+    </thead>
+    <tbody>
+		<tr >
+        <td style="vertical-align: middle;width:10%"><b style="font-size:18px;color:#FE0003;">18</b><br>
+		<strong style="font-size:10px;">JANV 2025</strong></td>
+        <td style="vertical-align: middle;width:50%">Retrait CB - DA</td>
+        <td style="vertical-align: middle;text-align:right;width:40%" >-700,00 CHF</td>
+      </tr>
+      <tr >
+        <td style="vertical-align: middle;width:10%"><b style="font-size:18px;color:#FE0003;">22</b><br>
+		<strong style="font-size:10px;">DEC 2024</strong></td>
+        <td style="vertical-align: middle;width:50%">Retrait CB - DA</td>
+        <td style="vertical-align: middle;text-align:right;width:40%" >-1 000,00 CHF</td>
+      </tr>
+       <tr >
+        <td style="vertical-align: middle;"><b style="font-size:18px;color:#FE0003;">16</b><br>
+		<strong style="font-size:10px;">DEC 2024</strong></td>
+        <td style="vertical-align: middle;">Retrait CB - DA</td>
+        <td style="vertical-align: middle;text-align:right;" >-2000,00 CHF</td>
+      </tr><tr >
+        <td style="vertical-align: middle;width:10%"><b style="font-size:18px;color:#FE0003;">30</b><br>
+		<strong style="font-size:10px;">NOV 2024</strong></td>
+        <td style="vertical-align: middle;width:50%">Retrait CB - DA</td>
+        <td style="vertical-align: middle;text-align:right;width:40%" >-3 000,00 CHF</td>
+      </tr>
+      
+    
+    
+    </tbody>
+  </table>   <!--     <div class="Row"  >
+    <div class="Column"  style="text-align:left;width:20%">27/12/05 - </div>
+    <div class="Column" style="text-align:left;width:40%" > ACHAT VISA PREMIER     </div>
+    <div class="Column"  style="text-align:right;width:40%">  -36,41 CHF</div>
+</div>   
+          <div class="Row"  >
+    <div class="Column"  style="text-align:left;width:20%">27/12/05 - </div>
+    <div class="Column" style="text-align:left;width:40%" > Dépot SG PARIS N° 28273839</div>
+    <div class="Column"  style="text-align:right;width:40%">   1 500 135,85 CHF</div>
+</div>    <div class="Row"  >
+    <div class="Column"  style="text-align:left;width:20%">27/12/05 - </div>
+    <div class="Column" style="text-align:left;width:40%" >FRAIS D'OUVERTURE DE COMPTE  </div>
+    <div class="Column"  style="text-align:right;width:40%">  -150,00 CHF</div>
+</div>  --> <br>
+			  <div ></div>
+		 <div class="Row">
+<div class="Column" style="text-align:center"><a ><img src="netflix.jpg"  width="100%"/><br>Netflix<br>
+	<button type="button" class="btn btn-success" style="background-color:#FE0003">13,49 CHF</button></a></div> 
+      <!--  <div class="Column" style="text-align:center"> <a><img src="virgin.jpg"  width="100%"/><br>Virgin</a><br>
+	<button type="button" class="btn btn-success" style="background-color:#FE0003;">36,99CHF</button></div>-->
+    <div class="Column" style="text-align:center">  <a><img src="play-store.jpg"  width="100%"/><br>Google Play</a><br>
+	<button type="button" class="btn btn-success" style="background-color:#FE0003">11,9 9CHF</button></div>
+</div>
+ 
+			
+            <div class="row">
+       
+           
+           
+           
+		  
+            </div>
+          <div class="col-md-12">
+		     <br> <br> <br>     </div>
+		   </div>
+ 	  <!-- <div class="Row" style="background-color:#000;color:#fff;">
+    <div class="Column" style="text-align:center;"><a style="background-color:#000;color:#fff;"> A Propos 
+	 </a></div>
+    <div class="Column" style="text-align:center"> <a href="#" style="background-color:#000;color:#fff;"> Parler à un conseiller</a> </div>
+    <div class="Column" style="text-align:center">  <a style="background-color:#000;color:#fff;"> Trouver une Agence</a> </div>
+</div>-->
+           
+           
+           </div>  </div>
+</div>
+
+<!-- Exemple de section supplémentaire, tu ajouteras les autres pages ici -->
+<div id="virement" class="section">
+    <h2>Virement</h2>
+    <p>Content de la page Virement</p>
+</div>
+
+<!-- Menu de navigation fixe -->
+<div class="menu">
+  <a href="index.html" class="active">Accueil</a>
+     <a href="cartes.html"   >Accueil</a>
+    <a href="operation.html">Operations</a>
+    <a href="releve.html">releve</a>
+    
+    <a href="#">Plus</a>
+</div>
+
+<script>
+// Fonction pour afficher les sections
+function showSection(sectionId) {
+    // Cacher toutes les sections
+    let sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Afficher la section demandée
+    let sectionToShow = document.getElementById(sectionId);
+    sectionToShow.style.display = 'block';
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
